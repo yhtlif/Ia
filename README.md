@@ -22,7 +22,7 @@ O código deste projeto é MIT. Os pesos dos modelos seguem a licença de cada u
 
 O projeto tem proteções embutidas:
 
-1. **Filtro de texto** (`seguranca.py`) bloqueia pedidos com menores de idade (incluindo idades < 18), conteúdo sexual/nudez e recriação de pessoas reais (deepfake).
+1. **Filtro de texto** (`seguranca.py`) bloqueia apenas o essencial: menores de idade (incluindo idades < 18), nudez/sexo explícito e recriação de pessoas reais (deepfake). Moda, roupa de banho, lingerie, "sexy", maquiagem "nude" etc. são permitidos.
 2. **Prompt negativo** fixo contra menores e NSFW em todas as gerações.
 3. **Verificador de imagem** (`CompVis/stable-diffusion-safety-checker`) substitui por uma imagem preta qualquer resultado detectado como NSFW.
 

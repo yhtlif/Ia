@@ -105,7 +105,7 @@ def montar_prompt(pedido: Pedido) -> tuple[str, str]:
     enquadramento = _escolher(ENQUADRAMENTOS, pedido.enquadramento, "Enquadramento")
     pessoa = _escolher(FAIXAS_ETARIAS, pedido.faixa_etaria, "Faixa etária")
     # Os encoders CLIP do SDXL leem só ~77 tokens: o mais importante vem primeiro.
-    partes = [f"{enquadramento} of a beautiful {pessoa}, fully clothed"]
+    partes = [f"{enquadramento} of a beautiful {pessoa}, tasteful"]
     descricao = pedido.descricao.strip()
     if descricao:
         partes.append(descricao)
