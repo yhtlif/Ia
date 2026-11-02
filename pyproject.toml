@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ia-imagens"
+version = "0.1.0"
+description = "IA open source para geração de retratos femininos com Stable Diffusion XL / FLUX"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.1",
+    "diffusers>=0.30",
+    "transformers>=4.40",
+    "accelerate>=0.30",
+    "safetensors>=0.4",
+    "sentencepiece>=0.2",
+    "protobuf>=4.25",
+    "numpy>=1.24",
+    "pillow>=10.0",
+    "gradio>=4.40",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+ia-imagens = "ia_imagens.cli:main"
+ia-imagens-web = "ia_imagens.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
